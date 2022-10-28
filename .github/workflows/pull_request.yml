@@ -20,6 +20,7 @@ jobs:
 
       - name: build
         run: |
+          npm install eslint-plugin-react@latest --save-dev
           npm run lint:js
           npm run lint:css
           npm run build
