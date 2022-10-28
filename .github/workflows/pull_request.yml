@@ -20,10 +20,13 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: eslint
+        run: npm install
         run: npm run lint:js
 
       - name: stylelint
+        run: npm install
         run: npm run lint:css
 
       - name: webpack build
+        run: npm install
         run: npm run build
