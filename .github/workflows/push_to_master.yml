@@ -21,18 +21,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: eslint
-        run: npm install
-        run: npm run lint:js
-
-      - name: stylelint
-        run: npm install
-        run: npm run lint:css
-
-      - name: webpack build
-        run: npm install
-        run: npm run build
-
-      - name: GitHub pages deploy
-        run: npm install
-        run: npm run deploy
+      - name: build and deploy
+        run: |
+        npm install
+        npm run lint:js
+        npm run lint:css
+        npm run build
+        npm run deploy
