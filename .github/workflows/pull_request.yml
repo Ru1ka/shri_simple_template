@@ -21,7 +21,7 @@ jobs:
 
       - name: build
         run: |
-        npm install
-        npm run lint:js
-        npm run lint:css
-        npm run build
+          npm install
+          npm run lint:js
+          npm run lint:css
+          npm run build
