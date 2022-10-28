@@ -22,8 +22,8 @@
   "scripts": {
     "start": "webpack serve --mode=development --config ./webpack.config.js",
     "build": "webpack --mode=production --config ./webpack.config.js",
-    "lint:js": "npx eslint src --config .eslintrc.js --fix",
-    "lint:css": "npx stylelint --config .stylelintrc.json --fix \"src/**/*.css\"",
+    "lint:js": "npx eslint src/**/*.js --fix",
+    "lint:css": "npx stylelint src/**/*.css --fix",
     "analyze": "statoscope validate -i stats.json",
     "deploy": "gh-pages -d dist",
     "prepare": "husky install",
