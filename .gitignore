@@ -10,7 +10,6 @@
 
 # production
 /build
-/dist
 
 # misc
 .DS_Store
@@ -24,7 +23,3 @@ yarn-debug.log*
 yarn-error.log*
 
 test-report.html
-
-# stats
-stats.json
-report.html

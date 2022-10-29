@@ -91,7 +91,7 @@ const config = {
         }
     },
     // @TODO lodash treeshaking Done 👆
-    // @TODO chunk for lodash
+    // @TODO chunk for lodash ?
     // @TODO chunk for runtime Done 👆
     // @TODO fallback for crypto Done 👆
 };
