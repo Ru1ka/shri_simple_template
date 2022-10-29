@@ -8,6 +8,18 @@ require('dotenv').config();
 const ASSET_PATH = process.env.ASSET_PATH || '/';
 
 const config = {
+    resolve: {
+        extensions: ['.js', 'json'],
+        fallback: {
+            buffer: require.resolve('buffer'),
+            crypto: require.resolve('crypto-browserify'),
+            stream: false
+        },
+        alias: {
+            'react-is': path.resolve(__dirname, 'node_modules/react-is')
+        }
+    },
+    
     entry: {
         index: './src/index.js',
         about: './src/pages/About.js',
@@ -81,7 +93,7 @@ const config = {
     // @TODO lodash treeshaking Done 👆
     // @TODO chunk for lodash
     // @TODO chunk for runtime Done 👆
-    // @TODO fallback for crypto
+    // @TODO fallback for crypto Done 👆
 };
 
 module.exports = config;
