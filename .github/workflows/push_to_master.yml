@@ -28,4 +28,6 @@ jobs:
           npm run build
           npm run validate
           npm run analyze
+          git config user.email "wotb5ks@gmail.com"
+          git config user.name "Ru1ka"
           npm run deploy
