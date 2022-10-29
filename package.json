@@ -10,6 +10,7 @@
     "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-is": "^18.2.0",
     "react-redux": "^7.2.4",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
@@ -17,17 +18,18 @@
     "redux": "^4.1.0",
     "redux-observable": "^2.0.0",
     "rxjs": "^7.1.0",
-    "stream": "^0.0.2"
+    "stream": "^0.0.2",
+    "uuid": "^9.0.0"
   },
   "scripts": {
     "start": "webpack serve --mode=development --config ./webpack.config.js",
     "build": "webpack --mode=production --config ./webpack.config.js",
-    "lint:js": "npx eslint src --config .eslintrc.js --fix",
-    "lint:css": "npx stylelint --config .stylelintrc.json --fix \"src/**/*.css\"",
-    "analyze": "statoscope validate -i stats.json",
+    "lint:js": "npx eslint src/**/*.js --fix",
+    "lint:css": "npx stylelint src/**/*.css --fix",
+    "analyze": "webpack --json stats.json",
+    "validate": "statoscope validate -i stats.json --config ./statoscope.config.js",
     "deploy": "gh-pages -d dist",
-    "prepare": "husky install",
-    "validate": "webpack --json stats.json"
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
@@ -43,6 +45,7 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-only-warn": "^1.0.3",
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-webpack-plugin": "^3.2.0",

@@ -23,8 +23,10 @@ jobs:
 
       - name: build and deploy
         run: |
-          npm install
+          npm i
           npm run lint:js
           npm run lint:css
           npm run build
+          npm run validate
+          npm run analyze
           npm run deploy
