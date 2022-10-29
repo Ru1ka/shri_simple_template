@@ -24,5 +24,5 @@ jobs:
           npm run lint:js
           npm run lint:css
           npm run build
-          npm validate
-          npm analyze
+          npm run validate
+          npm run analyze
