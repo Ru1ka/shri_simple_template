@@ -20,8 +20,8 @@ const config = {
         }),
         new StatoscopePlugin({
             name: "shri_simple_template",
-            saveReportTo: 'report-[name]-[hash].html',
-            saveStatsTo: 'stats-[name]-[hash].json',
+            saveReportTo: 'report.html',
+            saveStatsTo: 'stats.json',
             saveOnlyStats: false,
             open: false,
         }),
@@ -85,4 +85,3 @@ const config = {
 };
 
 module.exports = config;
-// test gh actions
